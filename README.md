@@ -65,12 +65,14 @@ The entertainment industry deals with vast amounts of data from various sources,
 ## Project Structure
 
 The ETL pipeline is divided into four deliverables:
+<details>
+<summary>### 1. Function Development (ETL_function_test_Del_1.ipynb)</summary>
 
-### 1. Function Development (ETL_function_test_Del_1.ipynb)
 - Create the initial ETL function structure
 - Set up data extraction from source files (JSON, CSV)
 - Implement basic dataframe creation
 
+</details>
 ### 2. Data Extraction & Cleaning (ETL_clean_wiki_movies_Del_2.ipynb)
 - Extract and filter Wikipedia movie data
 - Parse IMDb IDs using regular expressions
