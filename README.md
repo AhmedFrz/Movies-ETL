@@ -65,14 +65,12 @@ The entertainment industry deals with vast amounts of data from various sources,
 ## Project Structure
 
 The ETL pipeline is divided into four deliverables:
-<details>
-<summary>### 1. Function Development (ETL_function_test_Del_1.ipynb)</summary>
 
+### 1. Function Development (ETL_function_test_Del_1.ipynb)
 - Create the initial ETL function structure
 - Set up data extraction from source files (JSON, CSV)
 - Implement basic dataframe creation
 
-</details>
 ### 2. Data Extraction & Cleaning (ETL_clean_wiki_movies_Del_2.ipynb)
 - Extract and filter Wikipedia movie data
 - Parse IMDb IDs using regular expressions
@@ -344,14 +342,51 @@ Created a fully automated pipeline with:
 | Analyst Productivity | Low (data cleaning) | High (analysis) |
 | Data Integration | Manual | Automated |
 
+## Getting Started
+
+### Prerequisites
+- Python 3.x
+- PostgreSQL instance
+- Required Python packages:
+  ```
+  pandas
+  numpy
+  psycopg2
+  sqlalchemy
+  jupyter
+  ```
+
+### Installation
+1. Clone this repository
+   ```bash
+   git clone https://github.com/yourusername/movie-etl-pipeline.git
+   cd movie-etl-pipeline
+   ```
+
+2. Install dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Configure database connection
+   Create a `config.py` file with:
+   ```python
+   db_password = 'your_postgres_password'
+   ```
+
+4. Run the notebooks in sequence:
+   - `ETL_function_test_Del_1.ipynb` 
+   - `ETL_clean_wiki_movies_Del_2.ipynb`
+   - `ETL_clean_kaggle_data_Del_3.ipynb`
+   - `ETL_create_database_Del_4.ipynb`
 
 ## Future Enhancements
 
 ### Potential Improvements
 - **Workflow Orchestration**: Implement Apache Airflow for scheduling and monitoring
 - **Data Validation**: Add data quality checks and validation rules
+- **API Integration**: Add capability to fetch data from APIs in addition to files
 - **Visualization Layer**: Create dashboard for monitoring pipeline performance
 - **Incremental Processing**: Implement change detection for efficient updates
 - **Containerization**: Dockerize the pipeline for easier deployment
 - **Cloud Migration**: Adapt for cloud-based execution (AWS, GCP, Azure)
-
